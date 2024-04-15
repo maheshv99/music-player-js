@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <script
+      src="https://kit.fontawesome.com/cc6eb054b8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-theme="light">
+    <div id="header">
+      <h1>Music Player</h1>
+
+      <div id="toggle-container">
+        <button id="toggle-button">
+          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </div>
+    <div id="container">
+      <div id="allSong">
+        <label for="filterSong">Filter by Genre : </label>
+        <select name="genre" id="filterSong">
+          <option value="allsong">All</option>
+        </select>
+
+        <h2>All Songs</h2>
+
+        <div id="showAllSongs"></div>
+      </div>
+      <div id="currentSong">
+        <div class="songContainer">
+          <div class="imageContainer">
+            <img src="./assets/images/popsongs/all_ok_.jpg" alt="song img" />
+          </div>
+          <h2 class="songName"></h2>
+          <div class="songArtist"></div>
+        </div>
+        <div class="songControlsContainer">
+          <audio
+            controls
+            src="./assets/songs/popsongs/NINNA_GUNGALLI.m4a"
+          ></audio>
+          <div class="songsControlsBtn">
+            <button id="previousSong">
+              <i class="fa-solid fa-backward"></i>
+            </button>
+            <button id="nextSong"><i class="fa-solid fa-forward"></i></button>
+            <button id="addtoplaylist">Add To Playlist</button>
+          </div>
+        </div>
+      </div>
+      <div id="playList">
+        <div class="playlistHeader">
+          <input
+            type="text"
+            placeholder="Enter Playlist Name"
+            name="playListSongInput"
+            id="addPlayListInput"
+          />
+          <button id="createPlaylist">Create Playlist</button>
+        </div>
+        <div class="playlistContent">
+          <h3>Current Playlist</h3>
+          <div class="currentPlaylist"></div>
+          <h3>All Playlist</h3>
+          <div class="allPlaylist"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
